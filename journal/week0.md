@@ -27,7 +27,7 @@ This is where I added a code to enable gitpod install aws cli automatically each
 
 ### Created BUDGET and BILLING ALARM VIA AWS CLI using json
 
-This is when I tried to connfirm the env variables I set
+This is when I tried to confirm the env variables I set
 ![awsidentity](https://user-images.githubusercontent.com/99274632/220949659-71026573-825e-42d4-a839-0cf7cba634aa.PNG)
 
 I previously created billing and budget manually but decided to use code to create via aws cli
@@ -48,5 +48,5 @@ This is the subscription confirmation
 Pushed files created to github
 ![files](https://user-images.githubusercontent.com/99274632/220954687-608053bf-806b-41b0-87de-9768d5cb2923.PNG)
 
-This are some of the commands I used
+These are some of the commands I used
 ![com](https://user-images.githubusercontent.com/99274632/220954667-f8b219e4-dd58-43d6-b51d-156c50608455.PNG)
