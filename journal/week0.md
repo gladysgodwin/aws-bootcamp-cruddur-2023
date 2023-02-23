@@ -15,4 +15,28 @@ Based on the Requirement gathering meeting, the logical design required for crud
 ![lucid](https://user-images.githubusercontent.com/99274632/220733204-dbbc009d-e3a6-4cf2-b9b3-27f7f5809f0b.PNG)
 
 [lucidchart logical diagram link](https://lucid.app/lucidchart/ae479679-fbaa-4c1a-b501-cbcf83c8b668/edit?viewport_loc=-32%2C-69%2C2216%2C997%2C0_0&invitationId=inv_ec16a08d-241f-4716-a2d2-e092a17be0e3)
-2
+
+### Installed AWS cli and configure aws-cli auto-prompt with Gitpod.
+
+![permissionssorted](https://user-images.githubusercontent.com/99274632/220951097-ebbae1e1-752e-4cfc-819c-fd12fcda0cd3.PNG)
+
+![prompt](https://user-images.githubusercontent.com/99274632/220951521-9d53903e-a83d-46a7-b20f-0822bcbf9ad4.PNG)
+
+
+### Created BUDGET and BILLING ALARM VIA AWS CLI using json
+
+![json](https://user-images.githubusercontent.com/99274632/220952329-f6a49156-bcff-4cd1-b595-2c939701e93d.PNG)
+
+![awsidentity](https://user-images.githubusercontent.com/99274632/220949659-71026573-825e-42d4-a839-0cf7cba634aa.PNG)
+
+![biling](https://user-images.githubusercontent.com/99274632/220949615-26a2a837-2a9b-4e8c-acc2-6ed0797d1c2a.PNG)
+
+![sns](https://user-images.githubusercontent.com/99274632/220953696-b341b00e-8af3-4c6f-9049-a3df845b8c8d.PNG)
+
+![budjet](https://user-images.githubusercontent.com/99274632/220949881-83d3a0b8-ae5a-42eb-abc7-a8d1b39b2311.PNG)
+
+![subcon](https://user-images.githubusercontent.com/99274632/220954225-f318cc34-9797-4d3c-b095-88b5d6c0c453.PNG)
+
+![files](https://user-images.githubusercontent.com/99274632/220954687-608053bf-806b-41b0-87de-9768d5cb2923.PNG)
+
+![com](https://user-images.githubusercontent.com/99274632/220954667-f8b219e4-dd58-43d6-b51d-156c50608455.PNG)
