@@ -15,3 +15,4 @@ Based on the Requirement gathering meeting, the logical design required for crud
 ![lucid](https://user-images.githubusercontent.com/99274632/220733204-dbbc009d-e3a6-4cf2-b9b3-27f7f5809f0b.PNG)
 
 [lucidchart logical diagram link](https://lucid.app/lucidchart/ae479679-fbaa-4c1a-b501-cbcf83c8b668/edit?viewport_loc=-32%2C-69%2C2216%2C997%2C0_0&invitationId=inv_ec16a08d-241f-4716-a2d2-e092a17be0e3)
+2
