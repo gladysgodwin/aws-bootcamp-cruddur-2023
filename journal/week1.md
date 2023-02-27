@@ -457,5 +457,17 @@ I was able to connect. See below:
 
 ![database](https://user-images.githubusercontent.com/99274632/221613227-678b8e59-4211-45c8-a8d8-124f76efbe34.PNG)
 
+<br>
+  
+## I added pushed my docker images to dockerhub
 
+![bckendpushed](https://user-images.githubusercontent.com/99274632/221616238-110610e5-176c-4e14-96b8-4acce92c73f6.PNG)
+  
+<br>
 
+![pushedfrontend](https://user-images.githubusercontent.com/99274632/221616303-4deb26c9-08a3-4274-a17c-9d9f5678c57e.PNG)
+  
+<br>
+  
+
+![dockerhub](https://user-images.githubusercontent.com/99274632/221617736-c6428aab-de20-420d-9175-9e2fa8869eeb.PNG)
