@@ -342,3 +342,120 @@ export default function NotificationsFeedPage() {
 <br>
   
 ![frontendapi](https://user-images.githubusercontent.com/99274632/221464353-7b72b87e-b234-4042-a2b2-229f1b525308.PNG)
+  
+<br>
+## Step 8: Added Dynamodb and Postgres Database to my code
+
+Installed yml extension and added the following code to the docker compose file to add dynamodb and postgres. See code below:
+  <br>
+  
+  ```
+dynamodb-local:
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=bootcamp
+      - POSTGRES_PASSWORD=gladys
+    ports: 
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+  ```
+  
+  <br>
+  
+  Then do <br> `docker-compose down && docker-compose up` <br> to build the database, after which we open the ports on the terminal.
+  
+  Then I created a table using the code below:
+  
+  ```
+  aws dynamodb create-table \
+    --table-name Music \
+    --attribute-definitions \
+        AttributeName=Artist,AttributeType=S \
+        AttributeName=SongTitle,AttributeType=S \
+    --key-schema \
+        AttributeName=Artist,KeyType=HASH \
+        AttributeName=SongTitle,KeyType=RANGE \
+    --provisioned-throughput \
+        ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --billing-mode PROVISIONED
+
+  ```
+  
+  <br>
+  I had to use the updated command as the one in the cloud challange repository didnt work for me. 
+  
+  I checked the status using the code:
+  ```
+  aws dynamodb describe-table --table-name Music 
+  ```
+  <br>
+  See result in the screenshot below
+  <br>
+  
+  ![confirmdyndb](https://user-images.githubusercontent.com/99274632/221605663-4e33c143-0306-4705-a32d-737a58d8956f.PNG)
+<br>
+ 
+ ### Added code to gitpod.yml file to install Postgres automatically whenever I launched the repository via gitpod. See code below:
+ <br>
+  
+```
+  - name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+  
+ ```
+ <br> 
+I installed Postgres extension on gitpod and added the code to the gitpod.yml file. see the line of code added, below:
+  <br>
+
+```
+  - cweijan.vscode-postgresql-client2
+```
+  
+<br>
+The above code was added under the extension section of the code.
+  
+### Step 9: Committed and Push my code to github
+#### Ran `docker compose down` to stop the application so I can launch a new workspace that will install Postgres extension and Postgres automatically upon launching. 
+#### Closed the workspace and opened a new workspace for my repo.
+  
+#### cd into frontend-react-js folder and ran `npm i` to install dependencies for frontend so that it will be served on the port 3000.
+#### cd back into the root directory, then did `docker compose up -d` go start the application again.
+#### on the extension toolbar, click on the database explorer.
+
+<br>
+  
+![db explorer](https://user-images.githubusercontent.com/99274632/221611876-73f8f483-ce9f-458b-8527-ee6e2b2863e1.png)
+
+<br>
+  
+#### Clicked on the plus symbol to add new database. I used the username and password I inputed on my docker compose file for postgres.
+
+<br>
+
+![dbconnect](https://user-images.githubusercontent.com/99274632/221612802-b0821f9e-ad51-4061-89c0-34d8dd81657a.png)
+
+<br>
+I was able to connect. See below:
+  
+<br>
+
+![database](https://user-images.githubusercontent.com/99274632/221613227-678b8e59-4211-45c8-a8d8-124f76efbe34.PNG)
+
+
+
