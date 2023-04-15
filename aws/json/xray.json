@@ -6,7 +6,7 @@
         "FixedRate": 0.1,
         "ReservoirSize": 5,
         "ServiceName": "backend-flask",
-        "ServeType": "*",
+        "ServiceType": "*",
         "Host": "*",
         "HTTPMethod": "*",
         "URLPath": "*",
